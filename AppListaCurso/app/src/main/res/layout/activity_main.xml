@@ -12,7 +12,7 @@
         android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aplicativo Lista VIP devandroid.adriano.applistacurso.model.Curso Android"
+        android:text="Aplicativo Lista VIP Curso Android"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
