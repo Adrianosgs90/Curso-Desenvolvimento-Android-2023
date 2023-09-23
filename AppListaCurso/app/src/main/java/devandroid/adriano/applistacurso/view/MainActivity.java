@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
         int para = 0;
 
 
