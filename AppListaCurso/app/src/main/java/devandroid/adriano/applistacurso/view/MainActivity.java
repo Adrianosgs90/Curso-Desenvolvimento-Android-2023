@@ -3,6 +3,7 @@ package devandroid.adriano.applistacurso.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import devandroid.adriano.applistacurso.R;
 import devandroid.adriano.applistacurso.model.Pessoa;
@@ -56,9 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        Log.i("POOAndroid","Objeto pessoa: "+pessoa.toString());
+        Log.i("POOAndroid","Objeto outraPessoa: "+outraPessoa.toString());
 
-        int para = 0;
+
 
 
     }
+
+
 }
