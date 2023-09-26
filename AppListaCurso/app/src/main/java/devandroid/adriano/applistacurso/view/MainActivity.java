@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import devandroid.adriano.applistacurso.R;
 import devandroid.adriano.applistacurso.model.Pessoa;
@@ -37,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         pessoa = new Pessoa();
         // Atribuir conteudo, dados, valores para o Objeto
         // Confrome o seu MODELO, TEMPLATE
-        pessoa.setPrimeiroNome("Marco");
-        pessoa.setSobreNome("Maddo");
-        pessoa.setCursoDesejado("Android");
-        pessoa.setTelefoneDesejado("11-99229955");
+        //pessoa.setPrimeiroNome("Marco");
+        //pessoa.setSobreNome("Maddo");
+        //pessoa.setCursoDesejado("Android");
+        //pessoa.setTelefoneDesejado("11-99229955");
 
         outraPessoa = new Pessoa();
         outraPessoa.setPrimeiroNome("Luiz");
@@ -64,7 +66,41 @@ public class MainActivity extends AppCompatActivity {
         editTelefoneContato.setText(outraPessoa.getTelefoneDesejado());
 
 
+        btnLimpar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editPrimeiroNome.setText("");
+                editSobreNome.setText("");
+                editNomeDoCurso.setText("");
+                editTelefoneContato.setText("");
 
+            }
+        });
+
+        btnFinalizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Volte sempre", Toast.LENGTH_LONG).show();
+                finish();
+
+            }
+        });
+
+        btnSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                pessoa.setPrimeiroNome(editPrimeiroNome.getText().toString());
+                pessoa.setSobreNome(editSobreNome.getText().toString());
+                pessoa.setCursoDesejado(editNomeDoCurso.getText().toString());
+                pessoa.setTelefoneDesejado(editTelefoneContato.getText().toString());
+
+                Toast.makeText(MainActivity.this, "Salvo "+pessoa.toString(), Toast.LENGTH_LONG).show();
+
+
+
+            }
+        });
 /*
         dadosPessoa = "Primeiro nome: ";
         dadosPessoa += pessoa.getPrimeiroNome();
