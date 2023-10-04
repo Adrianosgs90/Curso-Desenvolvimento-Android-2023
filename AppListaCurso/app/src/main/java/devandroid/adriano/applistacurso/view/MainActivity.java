@@ -10,12 +10,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import devandroid.adriano.applistacurso.R;
-import devandroid.adriano.applistacurso.controller.PessoaController;
 import devandroid.adriano.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
-
-    PessoaController controller;
 
     Pessoa pessoa;
     Pessoa outraPessoa;
@@ -24,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editSobreNome;
     EditText editNomeDoCurso;
     EditText editTelefoneContato;
+
 
     Button btnLimpar;
     Button btnSalvar;
@@ -34,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        controller = new PessoaController();
-        controller.toString();
 
         pessoa = new Pessoa();
 
@@ -88,18 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setCursoDesejado(editNomeDoCurso.getText().toString());
                 pessoa.setTelefoneDesejado(editTelefoneContato.getText().toString());
 
-                Toast.makeText(MainActivity.this, "Salvo "+pessoa.toString(), Toast.LENGTH_LONG).show();
-
-                controller.salvar(pessoa);
-
-            }
-        });
-
-        Log.i("POOAndroid","Objeto pessoa: "+pessoa.toString());
-        Log.i("POOAndroid","Objeto outraPessoa: "+outraPessoa.toString());
-
-
-      Toast.makeText(MainActivity.this, "Salvo " + pessoa.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Salvo " + pessoa.toString(), Toast.LENGTH_LONG).show();
 
             }
         });
