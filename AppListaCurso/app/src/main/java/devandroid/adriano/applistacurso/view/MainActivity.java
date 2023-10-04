@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
     PessoaController controller;
 
-
     Pessoa pessoa;
     Pessoa outraPessoa;
 
@@ -25,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     EditText editSobreNome;
     EditText editNomeDoCurso;
     EditText editTelefoneContato;
-
 
     Button btnLimpar;
     Button btnSalvar;
