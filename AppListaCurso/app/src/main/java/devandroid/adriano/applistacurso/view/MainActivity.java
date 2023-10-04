@@ -57,13 +57,10 @@ public class MainActivity extends AppCompatActivity {
         btnSalvar = findViewById(R.id.btnSalvar);
         btnFinalizar = findViewById(R.id.btnFinalizar);
 
-
         editPrimeiroNome.setText(outraPessoa.getPrimeiroNome());
         editSobreNome.setText(outraPessoa.getSobreNome());
         editNomeDoCurso.setText(outraPessoa.getCursoDesejado());
         editTelefoneContato.setText(outraPessoa.getTelefoneDesejado());
-
-
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,12 +97,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         Log.i("POOAndroid","Objeto pessoa: "+pessoa.toString());
         Log.i("POOAndroid","Objeto outraPessoa: "+outraPessoa.toString());
 
 
+      Toast.makeText(MainActivity.this, "Salvo " + pessoa.toString(), Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+        Log.i("POOAndroid", "Objeto pessoa: " + pessoa.toString());
+        Log.i("POOAndroid", "Objeto outraPessoa: " + outraPessoa.toString());
 
 
     }
