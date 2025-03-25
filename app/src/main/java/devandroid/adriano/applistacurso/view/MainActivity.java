@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         dadosOutraPessoa += outraPessoa.getTelefoneContato();
 */
 
+
+
         Log.i("POOAndroid","Objeto pessoa: "+pessoa.toString());
         Log.i("POOAndroid","Objeto outrapessoa: "+outraPessoa.toString());
 
