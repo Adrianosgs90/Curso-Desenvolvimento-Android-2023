@@ -14,14 +14,14 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import devandroid.adriano.applistacurso.R;
+import devandroid.adriano.applistacurso.controller.PessoaController;
 import devandroid.adriano.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
+    PessoaController controller;
     Pessoa pessoa;
     Pessoa outraPessoa;
-
-
     EditText editPrimeiroNome;
     EditText editSobrenome;
     EditText editNomeCurso;
@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        controller = new PessoaController();
+        controller.toString();
 
         pessoa = new Pessoa();
 
@@ -89,6 +91,12 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setSobrenome(editSobrenome.getText().toString());
                 pessoa.setCursoDesejado(editNomeCurso.getText().toString());
                 pessoa.setTelefoneContato(editTelefoneContato.getText().toString());
+
+
+
+                controller.salvar(pessoa);
+
+
             }
         });
 
