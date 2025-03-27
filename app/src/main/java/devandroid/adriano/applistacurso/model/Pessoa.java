@@ -20,7 +20,6 @@ public class Pessoa {
     }
 
     public void setPrimeiroNome(String primeiroNome) {
-
         this.primeiroNome = primeiroNome;
     }
 
@@ -68,4 +67,7 @@ public class Pessoa {
                 ", telefoneContato='" + telefoneContato + '\'' +
                 '}';
     }
+
+
+
 }
