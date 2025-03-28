@@ -17,10 +17,6 @@ public class MainActivity extends AppCompatActivity {
     Pessoa pessoa;
     Pessoa outraPessoa;
 
-    String dadosPessoa;
-    String dadosOutraPessoa;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +28,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-
         pessoa = new Pessoa();
-
-        // Atribuir conteúdo dados e valoares para o Objeto
 
         pessoa.setPrimeiroNome("Adriano");
         pessoa.setSobrenome("Santos");
@@ -47,34 +40,9 @@ public class MainActivity extends AppCompatActivity {
         outraPessoa.setSobrenome("Alves");
         outraPessoa.setCursoDesejado("Java");
         outraPessoa.setTelefoneContato("11-5599336");
-/*
-
-        dadosPessoa = "Primeiro Nome: ";
-        dadosPessoa += pessoa.getPrimeiroNome();
-        dadosPessoa += " Sobrenome: ";
-        dadosPessoa += pessoa.getSobrenome();
-        dadosPessoa += " Curso Desejado: ";
-        dadosPessoa += pessoa.getCursoDesejado();
-        dadosPessoa += " Telefone Contato ";
-        dadosPessoa += pessoa.getTelefoneContato();
-
-        dadosOutraPessoa = "Primeiro Nome: ";
-        dadosOutraPessoa += outraPessoa.getPrimeiroNome();
-        dadosOutraPessoa += " Sobrenome: ";
-        dadosOutraPessoa += outraPessoa.getSobrenome();
-        dadosOutraPessoa += " Curso Desejado: ";
-        dadosOutraPessoa += outraPessoa.getCursoDesejado();
-        dadosOutraPessoa += " Telefone Contato ";
-        dadosOutraPessoa += outraPessoa.getTelefoneContato();
-*/
-
-
 
         Log.i("POOAndroid","Objeto pessoa: "+pessoa.toString());
         Log.i("POOAndroid","Objeto outrapessoa: "+outraPessoa.toString());
-
-
-
 
     }
 
