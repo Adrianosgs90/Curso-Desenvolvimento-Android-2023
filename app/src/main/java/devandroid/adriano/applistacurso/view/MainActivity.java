@@ -104,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setTelefoneContato(editTelefoneContato.getText().toString());
 
 
-
                 controller.salvar(pessoa);
 
 
