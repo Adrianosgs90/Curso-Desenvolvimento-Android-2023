@@ -3,6 +3,7 @@ package devandroid.adriano.applistacurso.view;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         editNomeCurso.setText(pessoa.getCursoDesejado());
         editTelefoneContato.setText(pessoa.getTelefoneContato());
 
-        btnLimpar.setOnClickListener(new View.OnClickListener() {
+        btnLimpar.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 editPrimeiroNome.setText("");
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnFinalizar.setOnClickListener(new View.OnClickListener() {
+        btnFinalizar.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Volte sempre", Toast.LENGTH_LONG).show();
@@ -95,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnSalvar.setOnClickListener(new View.OnClickListener() {
+        btnSalvar.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 pessoa.setPrimeiroNome(editPrimeiroNome.getText().toString());
