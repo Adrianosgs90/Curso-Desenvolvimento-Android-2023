@@ -8,7 +8,6 @@ public class Pessoa {
     // Atributo - Objeto - Molde -Modelo - Template
     // Métodos de Acesso - Getts and Setts
 
-
     private String primeiroNome;
     private String sobrenome;
     private String cursoDesejado;
@@ -20,7 +19,6 @@ public class Pessoa {
     }
 
     public void setPrimeiroNome(String primeiroNome) {
-
         this.primeiroNome = primeiroNome;
     }
 
@@ -65,4 +63,7 @@ public class Pessoa {
                 ", telefoneContato='" + telefoneContato + '\'' +
                 '}';
     }
+
+
+
 }
