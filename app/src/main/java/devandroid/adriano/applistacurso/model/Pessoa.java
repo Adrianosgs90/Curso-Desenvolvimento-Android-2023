@@ -8,7 +8,6 @@ public class Pessoa {
     // Atributo - Objeto - Molde -Modelo - Template
     // Métodos de Acesso - Getts and Setts
 
-
     private String primeiroNome;
     private String sobrenome;
     private String cursoDesejado;
