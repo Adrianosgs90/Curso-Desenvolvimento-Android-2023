@@ -50,9 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
         pessoa = new Pessoa();
 
-
-        pessoa = new Pessoa();
-
         pessoa.setPrimeiroNome("Adriano");
         pessoa.setSobrenome("Santos");
         pessoa.setCursoDesejado("Android");
