@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     PessoaController controller;
     Pessoa pessoa;
     Pessoa outraPessoa;
+
     EditText editPrimeiroNome;
     EditText editSobrenome;
     EditText editNomeCurso;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnLimpar;
     Button btnSalvar;
     Button btnFinalizar;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,16 +44,27 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+
         controller = new PessoaController();
         controller.toString();
 
         pessoa = new Pessoa();
+
+
+        pessoa = new Pessoa();
+
+        pessoa.setPrimeiroNome("Adriano");
+        pessoa.setSobrenome("Santos");
+        pessoa.setCursoDesejado("Android");
+        pessoa.setTelefoneContato("11-99229191");
+
 
         outraPessoa = new Pessoa();
         outraPessoa.setPrimeiroNome("Luiz");
         outraPessoa.setSobrenome("Alves");
         outraPessoa.setCursoDesejado("Java");
         outraPessoa.setTelefoneContato("11-5599336");
+
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
         editSobrenome = findViewById(R.id.editSobrenome);
@@ -97,11 +111,13 @@ public class MainActivity extends AppCompatActivity {
                 controller.salvar(pessoa);
 
 
+
             }
         });
 
         Log.i("POOAndroid", "Objeto pessoa: " + pessoa.toString());
         Log.i("POOAndroid", "Objeto outrapessoa: " + outraPessoa.toString());
+
 
 
     }
