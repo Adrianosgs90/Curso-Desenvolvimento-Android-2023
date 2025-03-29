@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     public static final String NOME_PREFERENCES = "pref_listavip";
     PessoaController controller;
     Pessoa pessoa;
-    Pessoa outraPessoa;
 
     EditText editPrimeiroNome;
     EditText editSobrenome;
@@ -54,33 +53,24 @@ public class MainActivity extends AppCompatActivity {
         controller.toString();
 
         pessoa = new Pessoa();
-
-        pessoa.setPrimeiroNome("Adriano");
-        pessoa.setSobrenome("Santos");
-        pessoa.setCursoDesejado("Android");
-        pessoa.setTelefoneContato("11-99229191");
-
-
-        outraPessoa = new Pessoa();
-        outraPessoa.setPrimeiroNome("Luiz");
-        outraPessoa.setSobrenome("Alves");
-        outraPessoa.setCursoDesejado("Java");
-        outraPessoa.setTelefoneContato("11-5599336");
-
+        pessoa.setPrimeiroNome(preferences.getString("primeiroNome",""));
+        pessoa.setSobrenome(preferences.getString("sobrenome",""));
+        pessoa.setCursoDesejado(preferences.getString("cursoDesejado",""));
+        pessoa.setTelefoneContato(preferences.getString("telefoneContato",""));
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
         editSobrenome = findViewById(R.id.editSobrenome);
         editNomeCurso = findViewById(R.id.editNomeCurso);
         editTelefoneContato = findViewById(R.id.editTelefoneContato);
 
-        btnLimpar = findViewById(R.id.btnLimpar);
-        btnSalvar = findViewById(R.id.btnSalvar);
-        btnFinalizar = findViewById(R.id.btnFinalizar);
-
         editPrimeiroNome.setText(pessoa.getPrimeiroNome());
         editSobrenome.setText(pessoa.getSobrenome());
         editNomeCurso.setText(pessoa.getCursoDesejado());
         editTelefoneContato.setText(pessoa.getTelefoneContato());
+
+        btnLimpar = findViewById(R.id.btnLimpar);
+        btnSalvar = findViewById(R.id.btnSalvar);
+        btnFinalizar = findViewById(R.id.btnFinalizar);
 
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,8 +95,7 @@ public class MainActivity extends AppCompatActivity {
             pessoa.setSobrenome(editSobrenome.getText().toString());
             pessoa.setCursoDesejado(editNomeCurso.getText().toString());
             pessoa.setTelefoneContato(editTelefoneContato.getText().toString());
-
-            Toast.makeText(MainActivity.this, "Salvo "+pessoa.toString(), Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Salvo", Toast.LENGTH_LONG).show();
 
 
 
@@ -116,15 +105,11 @@ public class MainActivity extends AppCompatActivity {
             listaVip.putString("telefoneContato",pessoa.getTelefoneContato());
             listaVip.apply();
 
-
             controller.salvar(pessoa);
-
-
 
         });
 
         Log.i("POOAndroid", "Objeto pessoa: " + pessoa.toString());
-        Log.i("POOAndroid", "Objeto outrapessoa: " + outraPessoa.toString());
 
 
 
