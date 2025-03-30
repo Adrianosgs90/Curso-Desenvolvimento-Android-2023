@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     Pessoa pessoa;
     List<String> nomesDosCursos;
 
+
     EditText editPrimeiroNome;
     EditText editSobrenome;
     EditText editNomeCurso;
