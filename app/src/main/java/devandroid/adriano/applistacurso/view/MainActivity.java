@@ -29,12 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
     Pessoa pessoa;
     List<String> nomesDosCursos;
-
-
     EditText editPrimeiroNome;
     EditText editSobrenome;
     EditText editNomeCurso;
     EditText editTelefoneContato;
+
     Button btnLimpar;
     Button btnSalvar;
     Button btnFinalizar;
